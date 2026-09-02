@@ -1,0 +1,32 @@
+name: Update Urdumaaza News
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Fetch RSS feeds
+        run: python fetch_news.py
+
+      - name: Commit news.json
+        run: |
+          git config user.name "Urdumaaza News Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add news.json
+          git diff --cached --quiet || git commit -m "Update live Urdu news"
+          git push
