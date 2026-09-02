@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Urdumaaza Live News</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#111;color:#fff;font-family:Arial,sans-serif}
+#um-live{width:100%;background:#111;border-top:3px solid #E10600;border-bottom:1px solid #333;height:52px;display:flex;align-items:center;position:relative;overflow:hidden;direction:rtl}
+.um-title{position:absolute;right:0;top:0;bottom:0;background:#E10600;color:#fff;padding:0 16px;display:flex;align-items:center;gap:6px;font-weight:700;font-size:14px;z-index:10;white-space:nowrap}
+.um-dot{width:8px;height:8px;background:#fff;border-radius:50%;display:inline-block;animation:umB 1s infinite}
+.um-window{flex:1;margin-right:155px;overflow:hidden;white-space:nowrap;height:100%;display:flex;align-items:center}
+#um-track{display:inline-flex;align-items:center;white-space:nowrap;will-change:transform;animation:umS 28s linear infinite}
+.um-item{display:inline-flex;align-items:center;gap:9px;margin-left:42px}
+.um-badge{font-size:10px;padding:3px 7px;border-radius:3px;color:#fff;font-weight:700}
+.um-head{color:#fff;font-size:17px;text-decoration:none}
+.um-head:hover{color:#ffcccc}
+@keyframes umB{0%,100%{opacity:1}50%{opacity:.2}}
+@keyframes umS{from{transform:translateX(0)}to{transform:translateX(50%)}}
+@media(max-width:600px){
+ .um-title{font-size:12px;padding:0 10px}
+ .um-window{margin-right:132px}
+ .um-head{font-size:15px}
+ #um-track{animation-duration:20s}
+}
+#status{position:fixed;bottom:4px;left:5px;font-size:10px;color:#777;display:none}
+</style>
+</head>
+<body>
+<div id="um-live">
+  <div class="um-title"><span class="um-dot"></span> تازہ ترین خبریں • LIVE</div>
+  <div class="um-window"><div id="um-track">خبریں لوڈ ہو رہی ہیں...</div></div>
+</div>
+<div id="status">Urdumaaza News Feed</div>
+<script>
+(async function(){
+  const track=document.getElementById('um-track');
+  async function load(){
+    try{
+      const r=await fetch('./news.json?ts='+Date.now(),{cache:'no-store'});
+      if(!r.ok) throw new Error('news.json '+r.status);
+      const data=await r.json();
+      const items=(data.items||[]).filter(x=>x.title&&x.link);
+      if(!items.length) throw new Error('empty feed');
+      const make=items.map(x=>`<span class="um-item"><span class="um-badge" style="background:${x.color||'#444'}">${x.source||'خبر'}</span><a class="um-head" href="${String(x.link).replace(/"/g,'&quot;')}" target="_blank" rel="noopener">${x.title}</a><span style="color:#E10600">•</span></span>`).join('');
+      track.innerHTML=make+make;
+    }catch(e){
+      // Keep the last successful headlines if available; only show loading on first failure.
+      if(!track.querySelector('.um-item')) track.textContent='خبریں عارضی طور پر دستیاب نہیں، دوبارہ کوشش جاری ہے...';
+    }
+  }
+  await load();
+  setInterval(load,180000);
+})();
+</script>
+</body>
+</html>
