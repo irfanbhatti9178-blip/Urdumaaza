@@ -1,0 +1,29 @@
+<!-- Urdumaaza LIVE Ticker v3 - Black BG White Fonts -->
+<div id="um-live" style="width:100%;background:#000000;border-top:3px solid #E10600;border-bottom:3px solid #E10600;height:52px;display:flex;align-items:center;position:relative;overflow:hidden;direction:rtl;font-family:'Noto Nastaliq Urdu',serif">
+  <div style="position:absolute;right:0;top:0;bottom:0;background:#E10600;color:#ffffff;padding:0 16px;display:flex;align-items:center;gap:6px;font-weight:700;font-size:14px;z-index:10"><span style="width:8px;height:8px;background:#fff;border-radius:50%;display:inline-block;animation:umB 1s infinite"></span> تازہ ترین خبریں • LIVE</div>
+  <div style="flex:1;margin-right:160px;overflow:hidden;white-space:nowrap;background:#000000"><div id="um-track" style="display:inline-block;white-space:nowrap;animation:umS 250s linear infinite;color:#ffffff">خبریں لوڈ ہو رہی ہیں...</div></div>
+</div>
+<style>@keyframes umB{0%,100%{opacity:1}50%{opacity:.2}}@keyframes umS{0%{transform:translateX(-50%)}100%{transform:translateX(0%)}}#um-live:hover #um-track{animation-play-state:paused}</style>
+<script>
+const UM_FEEDS=[
+ {url:'https://www.express.pk/feed/',name:'ایکسپریس',c:'#E10600'},
+ {url:'https://www.jang.com.pk/rss/1.1.0',name:'جنگ',c:'#006400'},
+ {url:'https://www.urdupoint.com/rss/',name:'اردو پوائنٹ',c:'#0A2A5E'},
+ {url:'https://dunya.com.pk/rss',name:'دنیا',c:'#d35400'},
+ {url:'https://urdu.geo.tv/rss/feeds/0.xml',name:'جیو',c:'#c0392b'}
+];
+function umParse(xml){try{let d=new DOMParser().parseFromString(xml,"text/xml");return[...d.querySelectorAll("item")].slice(0,6).map(i=>({t:i.querySelector("title")?.textContent||"",l:i.querySelector("link")?.textContent||"#"}))}catch(e){return[]}}
+async function umOne(f){
+ for(let p of [u=>`https://api.allorigins.win/get?url=${encodeURIComponent(u)}`,u=>`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(u)}`]){
+  try{let url=p(f.url);let r=await fetch(url);if(url.includes('allorigins')){let j=await r.json();if(j.contents){let it=umParse(j.contents);if(it.length)return it.map(x=>({...x,s:f}))}}else{let j=await r.json();if(j.status==='ok')return j.items.slice(0,6).map(i=>({t:i.title,l:i.link,s:f}))}}catch(e){continue}
+ }return[];
+}
+async function umLoad(){
+ let all=await Promise.all(UM_FEEDS.map(umOne));let items=all.flat();
+ if(!items.length){document.getElementById('um-track').innerHTML='<span style="color:#ffffff">⚠️ فیڈز لوڈ نہیں ہوئیں - دوبارہ کوشش...</span>';setTimeout(umLoad,5000);return}
+ let seen=new Set();items=items.filter(x=>{if(seen.has(x.t))return false;seen.add(x.t);return true});
+ let html=items.map(it=>`<span style="display:inline-flex;align-items:center;gap:8px;margin-left:45px"><span style="font-size:10px;padding:2px 6px;border-radius:3px;color:#fff;font-family:Arial;font-weight:700;background:${it.s.c}">${it.s.name}</span><span style="color:#ffffff;font-size:17px;cursor:pointer" onclick="window.open('${it.l.replace(/'/g,"\\'")}','_blank')">${it.t}</span><span style="color:#E10600"> • </span></span>`).join('');
+ document.getElementById('um-track').innerHTML=html+' &nbsp; '+html+' &nbsp; '+html;
+}
+umLoad();setInterval(umLoad,180000);
+</script>
