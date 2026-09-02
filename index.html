@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tazatareen News Ticker</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+    width: 100%;
+  }
+  #tazatareen-wrapper {
+    background: #c8102e;
+    padding: 6px 0;
+    overflow: hidden;
+    direction: rtl;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #tazatareen-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  #tazatareen-label {
+    background: #0d1b4c;
+    color: #fff;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 4px 10px;
+    white-space: nowrap;
+    border-radius: 3px;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+  #news-ticker-track {
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1;
+    position: relative;
+    height: 20px;
+  }
+  #news-ticker-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    white-space: nowrap;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div id="tazatareen-wrapper">
+  <div id="tazatareen-inner">
+    <span id="tazatareen-label">🔴 تازہ ترین</span>
+    <div id="news-ticker-track">
+      <span id="news-ticker-content">خبریں لوڈ ہو رہی ہیں...</span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  // 3 verified Pakistani Urdu RSS sources — ek fail ho to agla try hota hai
+  var sources = [
+    "https://jang.com.pk/rss/1/1",
+    "https://www.express.pk/feed/",
+    "https://www.urdupoint.com/rss/urdupoint.rss"
+  ];
+
+  // 2 CORS proxies — pehla fail/hang ho to dusra try hota hai
+  var proxies = [
+    function(url) { return "https://api.allorigins.win/raw?url=" + encodeURIComponent(url); },
+    function(url) { return "https://corsproxy.io/?" + encodeURIComponent(url); }
+  ];
+
+  var track = document.getElementById("news-ticker-track");
+  var content = document.getElementById("news-ticker-content");
+
+  var pos = 0;
+  var animId = null;
+  var speed = 1.5; // original speed wapis
+
+  function fetchWithTimeout(url, ms) {
+    var controller = new AbortController();
+    var timer = setTimeout(function() { controller.abort(); }, ms);
+    return fetch(url, { signal: controller.signal })
+      .then(function(res) {
+        clearTimeout(timer);
+        if (!res.ok) throw new Error("bad response");
+        return res.text();
+      })
+      .catch(function(err) {
+        clearTimeout(timer);
+        throw err;
+      });
+  }
+
+  function fetchWithProxy(rssUrl, proxyIndex) {
+    if (proxyIndex >= proxies.length) {
+      return Promise.reject(new Error("all proxies failed"));
+    }
+    var proxyUrl = proxies[proxyIndex](rssUrl);
+    return fetchWithTimeout(proxyUrl, 6000) // 6 sec timeout, hang nahi hoga
+      .catch(function() {
+        return fetchWithProxy(rssUrl, proxyIndex + 1);
+      });
+  }
+
+  function tryFetchSource(sourceIndex) {
+    if (sourceIndex >= sources.length) {
+      return Promise.reject(new Error("all sources failed"));
+    }
+    return fetchWithProxy(sources[sourceIndex], 0)
+      .then(function(xmlText) {
+        var parser = new DOMParser();
+        var xml = parser.parseFromString(xmlText, "text/xml");
+        var items = xml.getElementsByTagName("item");
+        if (items.length === 0) { throw new Error("no items"); }
+
+        var headlines = [];
+        for (var i = 0; i < Math.min(items.length, 15); i++) {
+          var titleNode = items[i].getElementsByTagName("title")[0];
+          if (titleNode && titleNode.textContent.trim()) {
+            headlines.push(titleNode.textContent.trim());
+          }
+        }
+        if (headlines.length === 0) { throw new Error("no headlines"); }
+        return headlines;
+      })
+      .catch(function() {
+        return tryFetchSource(sourceIndex + 1);
+      });
+  }
+
+  function loadNews() {
+    tryFetchSource(0)
+      .then(function(headlines) {
+        content.innerHTML = headlines.join("       ●       ");
+        restartScroll();
+      })
+      .catch(function() {
+        content.innerHTML = "خبریں لوڈ نہیں ہو سکیں";
+      });
+  }
+
+  function restartScroll() {
+    if (animId) { cancelAnimationFrame(animId); }
+    setTimeout(function() {
+      var trackWidth = track.offsetWidth;
+      var contentWidth = content.scrollWidth;
+      pos = trackWidth;
+      animate(trackWidth, contentWidth);
+    }, 100);
+  }
+
+  function animate(trackWidth, contentWidth) {
+    pos -= speed;
+    if (pos < -contentWidth) {
+      pos = trackWidth;
+    }
+    content.style.left = pos + "px";
+    animId = requestAnimationFrame(function() { animate(trackWidth, contentWidth); });
+  }
+
+  loadNews();
+  // Har 2 minute baad refresh (pehle 5 min thi)
+  setInterval(loadNews, 120000);
+})();
+</script>
+
+</body>
+</html>
