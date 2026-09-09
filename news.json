@@ -1,12 +1,47 @@
 {
-  "updated": 1788907291,
+  "updated": 1788914293,
   "items": [
+    {
+      "title": "کراچی، فائرنگ اور حادثے کے واقعات میں 2 افراد جاں بحق، ایک زخمی",
+      "link": "https://www.express.pk/story/2831643/karachi-2-killed-1-injured-in-shooting-and-accident-2831643/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Wed, 09 Sep 26 00:23:28 +0500"
+    },
+    {
+      "title": "پی ٹی آئی اور پیپلز پارٹی میں اعتماد کا فقدان ہے مگر بات چیت ہونی چاہیے، بلاول بھٹو",
+      "link": "https://www.express.pk/story/2831642/there-is-a-lack-of-trust-between-the-pti-and-the-ppp-but-dialogue-should-take-place-bilawal-bhutto-2831642/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Tue, 08 Sep 26 18:58:18 +0000"
+    },
+    {
+      "title": "سعودی عرب پر حوثی حملے، پاکستان اور ترکیے ردعمل کے لیے تیار ہو سکتے ہیں، خواجہ آصف",
+      "link": "https://www.express.pk/story/2831641/pakistan-and-turkey-could-prepare-to-respond-to-houthi-attacks-on-saudi-arabia-khawaja-asif-2831641/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Tue, 08 Sep 26 18:50:26 +0000"
+    },
+    {
+      "title": "سعودی ولی عہد محمد بن سلمان نے حوثیوں کو سخت جواب دینے کا عندیہ دے دیا",
+      "link": "https://www.express.pk/story/2831640/saudi-crown-prince-mohammed-bin-salman-has-indicated-a-strong-response-to-the-houthis-2831640/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Tue, 08 Sep 26 18:32:17 +0000"
+    },
+    {
+      "title": "کراچی، کانسٹیبل کو شہید کرنے والا ڈاکو پولیس مقابلے میں ہلاک، ساتھی فرار",
+      "link": "https://www.express.pk/story/2831639/karachi-bandit-who-killed-a-constable-shot-dead-in-police-encounter-accomplice-escapes-2831639/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Tue, 08 Sep 26 18:03:26 +0000"
+    },
     {
       "title": "آئینی عدالت، قادیانیوں سے متعلق کتاب کی اشاعت پر پابندی برقرار",
       "link": "https://www.express.pk/story/2831638/constitutional-court-upholds-ban-on-publication-of-book-regarding-qadianis-2831638/",
       "source": "ایکسپریس",
       "color": "#E10600",
-      "date": "Tue, 08 Sep 26 22:26:24 +0500"
+      "date": "Tue, 08 Sep 26 17:26:24 +0000"
     },
     {
       "title": "حکومت کا صوبائی دائرہ اختیار والی 17 وزارتیں ختم کرنے سے انکار",
@@ -35,41 +70,6 @@
       "source": "ایکسپریس",
       "color": "#E10600",
       "date": "Tue, 08 Sep 26 20:50:05 +0500"
-    },
-    {
-      "title": "دھرنے اور عوام کا رویہ",
-      "link": "https://www.express.pk/story/2831633/dharne-aur-awam-ka-rawaiya-2831633/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Tue, 08 Sep 26 20:50:05 +0500"
-    },
-    {
-      "title": "پاک ،افغان تعلقات کے نئے امکانات",
-      "link": "https://www.express.pk/story/2831632/pak-afghan-talukaat-ke-naye-imkanaat-2831632/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Tue, 08 Sep 26 20:50:03 +0500"
-    },
-    {
-      "title": "سندھ اسمبلی میں گرما گرمی",
-      "link": "https://www.express.pk/story/2831631/sindh-assembly-mein-garma-garmi-2831631/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Tue, 08 Sep 26 20:44:27 +0500"
-    },
-    {
-      "title": "مہنگا ایندھن، معیشت اور عوام",
-      "link": "https://www.express.pk/story/2831630/mehnga-eendhan-maeeshat-aur-awam-2831630/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Tue, 08 Sep 26 20:42:02 +0500"
-    },
-    {
-      "title": "سعودی عرب پر حوثیوں کے حملوں کے پیچھے ایران کا ہاتھ ہے، مارکو روبیو",
-      "link": "https://www.express.pk/story/2831627/marco-robio-says-iranian-hand-behind-houthi-attacks-on-saudi-arabia-2831627/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Tue, 08 Sep 26 14:32:24 +0000"
     }
   ]
 }
