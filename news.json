@@ -1,6 +1,27 @@
 {
-  "updated": 1790114724,
+  "updated": 1790123020,
   "items": [
+    {
+      "title": "ایران اور امریکا کے درمیان 3 گھنٹے طویل مذاکرات ہوئے، صدر ٹرمپ",
+      "link": "https://www.express.pk/story/2834169/three-hour-long-talks-took-place-between-iran-and-the-us-president-trump-2834169/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Tue, 22 Sep 26 18:45:52 +0000"
+    },
+    {
+      "title": "افغان سرزمین پڑوسی ملک کے خلاف دہشتگردی کیلئے استعمال نہ ہو، اسحاق ڈار",
+      "link": "https://www.express.pk/story/2834168/afghan-soil-should-not-be-used-for-terrorism-against-neighboring-country-ishaq-dar-2834168/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Tue, 22 Sep 26 18:39:42 +0000"
+    },
+    {
+      "title": "فکسڈ ٹیکس اسکیم بھی ناکام، صرف 2 نئے دکاندار شامل",
+      "link": "https://www.express.pk/story/2834167/fixed-tax-scheme-also-fails-only-2-new-shopkeepers-joined-2834167/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Tue, 22 Sep 26 16:55:21 +0000"
+    },
     {
       "title": "کراچی، سڑک بند کرنے کے خلاف ٹرانسپورٹرز نے احتجاجاً ماربل سے لدی گاڑیاں کھڑی کر دیں",
       "link": "https://www.express.pk/story/2834166/karachi-transporters-parked-marble-laden-vehicles-in-protest-against-the-closure-of-the-road-2834166/",
@@ -49,27 +70,6 @@
       "source": "ایکسپریس",
       "color": "#E10600",
       "date": "Tue, 22 Sep 26 20:58:44 +0500"
-    },
-    {
-      "title": "دہشت گردی کے خلاف جنگ کا نیا مرحلہ",
-      "link": "https://www.express.pk/story/2834159/dehshatgardi-ke-khilaf-jang-ka-naya-marhala-2834159/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Tue, 22 Sep 26 20:46:15 +0500"
-    },
-    {
-      "title": "سیاسی جماعتوں کی کہانی",
-      "link": "https://www.express.pk/story/2834158/siyasi-jamaaton-ki-kahani-2834158/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Tue, 22 Sep 26 20:46:01 +0500"
-    },
-    {
-      "title": "کوچۂ سخن",
-      "link": "https://www.express.pk/story/2834157/kucha-e-sukhan-2834157/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Tue, 22 Sep 26 20:32:13 +0500"
     }
   ]
 }
