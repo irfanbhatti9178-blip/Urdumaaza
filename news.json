@@ -1,6 +1,48 @@
 {
-  "updated": 1790547304,
+  "updated": 1790556573,
   "items": [
+    {
+      "title": "چینی آٹو موبائل صنعت کا گاڑیوں کی برآمدات کا ریکارڈ قائم",
+      "link": "https://www.express.pk/story/2835037/chinese-automobile-industry-sets-record-for-vehicle-exports-2835037/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Sun, 27 Sep 26 19:21:40 +0000"
+    },
+    {
+      "title": "سیلاب آیا نہیں محکمہ آبپاشی سندھ نے 77 کروڑ روپے روکنے پر خرچ کر ڈالے",
+      "link": "https://www.express.pk/story/2835036/even-before-the-floods-arrived-the-sindh-irrigation-department-spent-770-million-rupees-on-flood-containment-measures-2835036/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Sun, 27 Sep 26 18:53:58 +0000"
+    },
+    {
+      "title": "کراچی:سولجر بازار فائرنگ سے جاں بحق شخص کی شناخت کا معاملہ الجھ گیا",
+      "link": "https://www.express.pk/story/2835035/karachi-identification-of-the-man-killed-in-the-soldier-bazaar-shooting-has-become-complicated-2835035/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Sun, 27 Sep 26 23:34:58 +0500"
+    },
+    {
+      "title": "بھارت، 600 سال پرانی شاہی مسجد کو بچانے کے لیے مسلمانوں نے مسجد میں ڈیرے ڈال لیے",
+      "link": "https://www.express.pk/story/2835034/india-muslims-camp-out-inside-600-year-old-royal-mosque-to-save-it-2835034/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Sun, 27 Sep 26 23:20:54 +0500"
+    },
+    {
+      "title": "مکہ مکرمہ میں باران رحمت، مسجد الحرام میں بارش کے دوران عمرہ زائرین کا طواف کعبہ جاری",
+      "link": "https://www.express.pk/story/2835033/merciful-rain-falls-in-makkah-al-mukarramah-umrah-pilgrims-continue-performing-tawaf-of-the-kaaba-at-masjid-al-haram-amidst-the-rainfall-2835033/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Sun, 27 Sep 26 17:48:05 +0000"
+    },
+    {
+      "title": "صارفین ہوشیار، مصنوعی ذہانت سے ہدایات لینے والا کمپیوٹر وائرس دریافت",
+      "link": "https://www.express.pk/story/2835032/users-beware-computer-virus-that-takes-instructions-from-artificial-intelligence-discovered-2835032/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Sun, 27 Sep 26 22:35:45 +0500"
+    },
     {
       "title": "زباں فہمی297 ؛ لیجنڈ (لی جنڈ)، نابغہ اور عبقری",
       "link": "https://www.express.pk/story/2835031/zaban-fehmi-297-legend-le-jand-naabgha-aur-abqari-2835031/",
@@ -28,48 +70,6 @@
       "source": "ایکسپریس",
       "color": "#E10600",
       "date": "Sun, 27 Sep 26 21:45:15 +0500"
-    },
-    {
-      "title": "پل",
-      "link": "https://www.express.pk/story/2835027/pul-2835027/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Sun, 27 Sep 26 21:04:41 +0500"
-    },
-    {
-      "title": "انقلابی لیڈر علی شریعتی",
-      "link": "https://www.express.pk/story/2835026/inqilabi-leader-ali-shariati-2835026/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Sun, 27 Sep 26 21:04:40 +0500"
-    },
-    {
-      "title": "صدرِ آزاد کشمیر کا انتخاب اورکالعدم ایکشن کمیٹی",
-      "link": "https://www.express.pk/story/2835025/sadr-e-azad-kashmir-ka-intikhab-aur-kaladam-action-committee-2835025/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Sun, 27 Sep 26 21:04:40 +0500"
-    },
-    {
-      "title": "خطاب کی گونج",
-      "link": "https://www.express.pk/story/2835024/khitaab-ki-goonj-2835024/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Sun, 27 Sep 26 21:04:40 +0500"
-    },
-    {
-      "title": "پانچ لاشیں اور صرف ایک انڈا",
-      "link": "https://www.express.pk/story/2835023/paanch-laashein-aur-sirf-ek-anda-2835023/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Sun, 27 Sep 26 21:04:39 +0500"
-    },
-    {
-      "title": "عوام کے مسائل",
-      "link": "https://www.express.pk/story/2835022/awam-ke-masail-2835022/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Sun, 27 Sep 26 21:01:37 +0500"
     }
   ]
 }
