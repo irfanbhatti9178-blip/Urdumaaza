@@ -1,6 +1,55 @@
 {
-  "updated": 1792625837,
+  "updated": 1792633741,
   "items": [
+    {
+      "title": "کراچی، شہر کے مختلف علاقوں میں پولیس مقابلے، 4 ڈاکو زخمی حالت میں گرفتار",
+      "link": "https://www.express.pk/story/2839550/karachi-police-encounters-in-various-parts-of-the-city-4-bandits-arrested-in-injured-condition-2839550/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Thu, 22 Oct 26 01:33:15 +0500"
+    },
+    {
+      "title": "کراچی، لیاری میں ڈاکو کی فائرنگ سے شہری زخمی، اسپتال منتقل",
+      "link": "https://www.express.pk/story/2839549/citizen-injured-by-a-bandits-gunfire-in-lyari-karachi-shifted-to-hospital-2839549/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Thu, 22 Oct 26 01:18:41 +0500"
+    },
+    {
+      "title": "امریکا کا قومی قرض 40.4 ٹریلین ڈالر سے تجاوز کرگیا، میڈیا رپورٹس",
+      "link": "https://www.express.pk/story/2839548/us-national-debt-has-surpassed-404-trillion-according-to-media-reports-2839548/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Wed, 21 Oct 26 20:08:50 +0000"
+    },
+    {
+      "title": "امریکا نے ایران کی 4 کمپنیوں اور 9 بحری جہازوں سمیت 5 افراد پر پابندی عائد کر دی",
+      "link": "https://www.express.pk/story/2839547/the-us-has-imposed-sanctions-on-5-individuals-as-well-as-4-iranian-companies-and-9-vessels-2839547/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Wed, 21 Oct 26 19:56:15 +0000"
+    },
+    {
+      "title": "فیلڈ مارشل عاصم منیر سے مالدیپ کے صدر کی ملاقات، علاقائی سیکیورٹی اور دوطرفہ تعاون پر تبادلہ خیال",
+      "link": "https://www.express.pk/story/2839546/maldivian-president-meets-field-marshal-asim-munir-regional-security-and-bilateral-cooperation-discussed-2839546/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Wed, 21 Oct 26 19:32:05 +0000"
+    },
+    {
+      "title": "حیدرآباد، پرانی دشمنی پر فائرنگ سے ایک شخص جاں بحق",
+      "link": "https://www.express.pk/story/2839545/hyderabad-one-person-killed-in-a-shooting-stemming-from-an-old-enmity-2839545/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Wed, 21 Oct 26 23:44:23 +0500"
+    },
+    {
+      "title": "کراچی، نیوکراچی خمیسہ گوٹھ  میں پراسرار فائرنگ سے دو کم سن بھائی زخمی",
+      "link": "https://www.express.pk/story/2839544/two-young-brothers-injured-in-mysterious-firing-in-new-karachis-khamisa-goth-2839544/",
+      "source": "ایکسپریس",
+      "color": "#E10600",
+      "date": "Wed, 21 Oct 26 23:37:59 +0500"
+    },
     {
       "title": "ہر تیسرا گریجویٹ بے روزگار، مجموعی تعداد 80 لاکھ، 24 سالوں کے نوجوانوں کی تعداد زیادہ",
       "link": "https://www.express.pk/story/2839542/every-third-graduate-is-unemployed-the-total-number-is-8-million-the-number-of-young-people-under-24-is-higher-2839542/",
@@ -21,55 +70,6 @@
       "source": "ایکسپریس",
       "color": "#E10600",
       "date": "Wed, 21 Oct 26 16:57:02 +0000"
-    },
-    {
-      "title": "آسمان کے بعد خلا بھی میدانِ جنگ؟",
-      "link": "https://www.express.pk/story/2839538/aasman-ke-baad-khala-bhi-maidan-e-jang-2839538/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Wed, 21 Oct 26 21:55:50 +0500"
-    },
-    {
-      "title": "شمالی افغانستان میں معدنی وسائل پرکنٹرول تنازعات کا سبب",
-      "link": "https://www.express.pk/story/2839537/control-over-mineral-resources-in-northern-afghanistan-is-a-cause-of-conflict-2839537/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Wed, 21 Oct 26 21:47:25 +0500"
-    },
-    {
-      "title": "سندھ میں ایف بی آر چھاپوں سے مزید کاٹن جننگ فیکٹریاں، آئل ملز غیر فعال ہونے کے خدشات",
-      "link": "https://www.express.pk/story/2839535/sindh-fears-that-more-cotton-ginning-factories-and-oil-mills-may-become-non-operational-due-to-fbr-raids-2839535/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Wed, 21 Oct 26 16:35:54 +0000"
-    },
-    {
-      "title": "کوچۂ سخن",
-      "link": "https://www.express.pk/story/2839534/kucha-e-sukhan-2839534/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Wed, 21 Oct 26 21:21:13 +0500"
-    },
-    {
-      "title": "ڈھاکا کہانی",
-      "link": "https://www.express.pk/story/2839533/dhaka-kahani-2839533/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Wed, 21 Oct 26 21:20:39 +0500"
-    },
-    {
-      "title": "گورنر راج ، ایمرجنسی اور احتساب",
-      "link": "https://www.express.pk/story/2839532/governor-raj-emergency-aur-ehtesab-2839532/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Wed, 21 Oct 26 20:57:23 +0500"
-    },
-    {
-      "title": "ٹیکسٹائل مصنوعات کی برآمدات میں معمولی اضافہ",
-      "link": "https://www.express.pk/story/2839531/textile-masnooaat-ki-baramdaat-mein-mamooli-izafa-2839531/",
-      "source": "ایکسپریس",
-      "color": "#E10600",
-      "date": "Wed, 21 Oct 26 20:57:23 +0500"
     }
   ]
 }
